@@ -18,6 +18,10 @@
 		757A6E2317DFE8010066E969 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 757A6E2217DFE8010066E969 /* Default-568h@2x.png */; };
 		757A6E2617DFE8010066E969 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 757A6E2517DFE8010066E969 /* ViewController.m */; };
 		757A6E2917DFE8010066E969 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 757A6E2717DFE8010066E969 /* ViewController.xib */; };
+		757A6E3017DFE8550066E969 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 757A6E2F17DFE8550066E969 /* QuartzCore.framework */; };
+		757A6E3217DFEAA50066E969 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 757A6E3117DFEAA50066E969 /* CoreImage.framework */; };
+		757A6E3417DFEC990066E969 /* me.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 757A6E3317DFEC990066E969 /* me.jpeg */; };
+		757A6E3717DFED960066E969 /* UIImage+APImageProcessing.m in Sources */ = {isa = PBXBuildFile; fileRef = 757A6E3617DFED950066E969 /* UIImage+APImageProcessing.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +41,11 @@
 		757A6E2417DFE8010066E969 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		757A6E2517DFE8010066E969 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		757A6E2817DFE8010066E969 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+		757A6E2F17DFE8550066E969 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		757A6E3117DFEAA50066E969 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
+		757A6E3317DFEC990066E969 /* me.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = me.jpeg; sourceTree = "<group>"; };
+		757A6E3517DFED950066E969 /* UIImage+APImageProcessing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+APImageProcessing.h"; sourceTree = "<group>"; };
+		757A6E3617DFED950066E969 /* UIImage+APImageProcessing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+APImageProcessing.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +53,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				757A6E3217DFEAA50066E969 /* CoreImage.framework in Frameworks */,
+				757A6E3017DFE8550066E969 /* QuartzCore.framework in Frameworks */,
 				757A6E0D17DFE8010066E969 /* UIKit.framework in Frameworks */,
 				757A6E0F17DFE8010066E969 /* Foundation.framework in Frameworks */,
 				757A6E1117DFE8010066E969 /* CoreGraphics.framework in Frameworks */,
@@ -73,6 +84,8 @@
 		757A6E0B17DFE8010066E969 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				757A6E3117DFEAA50066E969 /* CoreImage.framework */,
+				757A6E2F17DFE8550066E969 /* QuartzCore.framework */,
 				757A6E0C17DFE8010066E969 /* UIKit.framework */,
 				757A6E0E17DFE8010066E969 /* Foundation.framework */,
 				757A6E1017DFE8010066E969 /* CoreGraphics.framework */,
@@ -89,6 +102,8 @@
 				757A6E2517DFE8010066E969 /* ViewController.m */,
 				757A6E2717DFE8010066E969 /* ViewController.xib */,
 				757A6E1317DFE8010066E969 /* Supporting Files */,
+				757A6E3517DFED950066E969 /* UIImage+APImageProcessing.h */,
+				757A6E3617DFED950066E969 /* UIImage+APImageProcessing.m */,
 			);
 			path = FiboImage;
 			sourceTree = "<group>";
@@ -96,6 +111,7 @@
 		757A6E1317DFE8010066E969 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				757A6E3317DFEC990066E969 /* me.jpeg */,
 				757A6E1417DFE8010066E969 /* FiboImage-Info.plist */,
 				757A6E1517DFE8010066E969 /* InfoPlist.strings */,
 				757A6E1817DFE8010066E969 /* main.m */,
@@ -163,6 +179,7 @@
 				757A6E2117DFE8010066E969 /* Default@2x.png in Resources */,
 				757A6E2317DFE8010066E969 /* Default-568h@2x.png in Resources */,
 				757A6E2917DFE8010066E969 /* ViewController.xib in Resources */,
+				757A6E3417DFEC990066E969 /* me.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -176,6 +193,7 @@
 				757A6E1917DFE8010066E969 /* main.m in Sources */,
 				757A6E1D17DFE8010066E969 /* AppDelegate.m in Sources */,
 				757A6E2617DFE8010066E969 /* ViewController.m in Sources */,
+				757A6E3717DFED960066E969 /* UIImage+APImageProcessing.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

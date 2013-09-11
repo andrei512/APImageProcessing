@@ -10,4 +10,8 @@
 
 @interface ViewController : UIViewController
 
+@property (nonatomic, strong) UIImageView *sampleImage;
+@property (weak, nonatomic) IBOutlet UIImageView *original;
+@property (weak, nonatomic) IBOutlet UIImageView *processed;
+
 @end
