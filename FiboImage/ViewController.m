@@ -52,14 +52,15 @@ CGFloat lerp(CGFloat a, CGFloat b, CGFloat p) {
                 int index = (bytesPerRow * y) + x * bytesPerPixel;
                 rgbaForIndex(index)
                 
-                int step = 3;
+                int step = 2;
 
                 int rightIndex = idx((x + step) % width, y);
                 int leftIndex = idx((x + width - step) % width, y);
 
                 
-                redForIndex(index) = redForIndexInContex(rightIndex, buffer);
-                blueForIndex(index) = blueForIndexInContex(leftIndex, buffer);
+                redForIndex(index) = redForIndexInContex(idx((x + step) % width, y), buffer);
+                blueForIndex(index) = blueForIndexInContex(idx((x + step + 1) % width, y), buffer);
+                greenForIndex(index) = greenForIndexInContex(idx((x + step + 2) % width, y), buffer);
             }
         }
         
