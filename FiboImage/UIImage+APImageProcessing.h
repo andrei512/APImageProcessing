@@ -30,6 +30,7 @@ alpha = alpha / 255.0;
 #define blueForIndexInContex(byteIndex, imageContext) imageContext[byteIndex + 2]
 #define alphaForIndexInContex(byteIndex, imageContext) imageContext[byteIndex + 3]
 
+#define idx(X, Y) ((bytesPerRow * (Y)) + (X) * bytesPerPixel) 
 
 @interface UIImage (APImageProcessing)
 

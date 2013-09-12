@@ -17,7 +17,7 @@
 
 @end
 
-CGFloat ler(CGFloat a, CGFloat b, CGFloat p) {
+CGFloat lerp(CGFloat a, CGFloat b, CGFloat p) {
     return a * p + b * (1.0 - p);
 }
 
@@ -42,7 +42,7 @@ CGFloat ler(CGFloat a, CGFloat b, CGFloat p) {
             CGImageRef imageRef = [self.original.image CGImage];
             NSUInteger width = CGImageGetWidth(imageRef);
             NSUInteger height = CGImageGetHeight(imageRef);
-            buffer = (unsigned char*) calloc(height * width * 4, sizeof(unsigned char));
+            buffer = (unsigned char*) calloc(height * width * bytesPerPixel, sizeof(unsigned char));
             memcpy(buffer, rawData, bytesPerRow * height);
         }
         
@@ -52,10 +52,10 @@ CGFloat ler(CGFloat a, CGFloat b, CGFloat p) {
                 int index = (bytesPerRow * y) + x * bytesPerPixel;
                 rgbaForIndex(index)
                 
-                int step = 2;
+                int step = 3;
 
-                int rightIndex = (bytesPerRow * y) + ((x + step) % width) * bytesPerPixel;
-                int leftIndex = (bytesPerRow * y) + ((x + width - step) % width) * bytesPerPixel;
+                int rightIndex = idx((x + step) % width, y);
+                int leftIndex = idx((x + width - step) % width, y);
 
                 
                 redForIndex(index) = redForIndexInContex(rightIndex, buffer);
